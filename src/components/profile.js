@@ -1,19 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
-const Profile = () => (
-    <div className="card" style={{width: '18rem'}}>
+const Profile = (props) => {
+
+ return (<div className="card" style={{width: '18rem'}}>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+        <h5 className="card-title">{props.data.first_name} {props.data.last_name}</h5>
         <a href="#" className="btn btn-primary">
-          Go somewhere
+          Detail
         </a>
       </div>
-    </div>
-)
+    </div>)
+}
 
 export default Profile
