@@ -1,15 +1,33 @@
+// ส่วนที่ 3
+
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Subject = () => (
-  <Layout>
-    <div className="container text-center my-5">
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to="/">Go back to the homepage</Link>
-    </div>
-  </Layout>
-)
+export default function MemberInfoPage() {
+  const data = useStaticQuery(graphql`
+    query {
+      directus {
+        Subject {
+          title
+          sections {
+            number
+          }
+        }
+      }
+    }
+  `)
 
-export default Subject
+  return (
+    <Layout>
+      { //ตัวอย่างการเข้าถึงเข้าถึงข้อมูล
+      /* {data.directus.Subject.map(subject => (
+        <div>
+          <h1>{subject.title} | {subject.sections.map((section) => <span>{section.number}</span>)}</h1>
+        </div>
+      ))} */}
+
+      {/* วางข้อมูลของคุณที่นี่ */}
+    </Layout>
+  )
+}
