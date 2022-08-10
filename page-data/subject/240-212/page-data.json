@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-subject-detail-js",
+    "path": "/subject/240-212",
+    "result": {"data":{"directus":{"Subject":[{"id":"240-212","title":"PROBABILITY AND STATISTICS","sections":[{"periods":[{"day":"Tuesday","start":"08:00:00","end":"09:50:00"},{"day":"Friday","start":"08:00:00","end":"08:50:00"}],"number":"01","student":[{"Member_id":{"student_id":"6210110171","first_name":"NICHAPA","last_name":"ARTPAT"}},{"Member_id":{"student_id":"6210110040","first_name":"JATUPORN","last_name":"WATTANASIN"}},{"Member_id":{"student_id":"6210110107","first_name":"NUTTANAI","last_name":"YAPRAJAN"}}]},{"periods":[{"day":"Thursday","start":"10:00:00","end":"11:50:00"},{"day":"Friday","start":"09:00:00","end":"09:50:00"}],"number":"02","student":[{"Member_id":{"student_id":"6110110038","first_name":"NATTHAPHONG","last_name":"PITISRIPHATTHANARAKUL"}},{"Member_id":{"student_id":"6210110253","first_name":"FATONIYAH","last_name":"HAJIMAYO"}}]}]}]}},"pageContext":{"subject_id":"240-212"}},
+    "staticQueryHashes": ["3649515864"]}
