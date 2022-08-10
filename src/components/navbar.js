@@ -26,14 +26,14 @@ const Navbar = ({ siteTitle }) => {
               <ExactNavLink
                 to="/"
               >
-                Team
+                <b>Team</b>
               </ExactNavLink>
             </li>
             <li className="nav-item">
               <ExactNavLink
                 to="/subject"
               >
-                Subject
+                <b>Subject</b>
               </ExactNavLink>
             </li>
           </ul>
