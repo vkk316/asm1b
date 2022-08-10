@@ -12,7 +12,8 @@ const IndexPage = () => {
   query{
     directus{
       Member{
-        first_name,
+        student_id
+        first_name
         last_name
     }
     }
@@ -24,7 +25,7 @@ const IndexPage = () => {
     <section className="py-5 text-center container">
       <div className="row py-lg-5">
         <div className="col-lg-6 col-md-8 mx-auto">
-        {data.directus.Member.map((x) => <Profile data={x} key={x.first_name}></Profile>)}
+        {data.directus.Member.map((x) => <Profile data={x} key={x.student_id}></Profile>)}
         </div>
       </div>
     </section>

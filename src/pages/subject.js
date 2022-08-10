@@ -18,16 +18,13 @@ export default function MemberInfoPage() {
     }
   `)
 
+  const subjects = data.directus.Subject //เข้าถึงข้อมูลของรายวิชาที่มีอยู่ในระบบผ่าน ตัวแปร subject (เป็นตัวแปร array นะครับ)
+
   return (
     <Layout>
-      { //ตัวอย่างการเข้าถึงเข้าถึงข้อมูล
-      /* {data.directus.Subject.map(subject => (
-        <div>
-          <h1>{subject.title} | {subject.sections.map((section) => <span>{section.number}</span>)}</h1>
-        </div>
-      ))} */}
-
-      {/* วางข้อมูลของคุณที่นี่ */}
+      {
+        // Write your code here.
+      }
     </Layout>
   )
 }

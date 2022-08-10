@@ -1,5 +1,7 @@
+//ส่วนที่ 1
+
 import * as React from "react"
-import { Link, useStaticQuery, graphql} from "gatsby"
+import { Link} from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Profile = (props) => {
