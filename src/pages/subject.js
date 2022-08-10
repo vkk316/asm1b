@@ -35,7 +35,7 @@ export default function MemberInfoPage() {
   )
 }
 
-export function MinSubjectCard(props) {
+function MinSubjectCard(props) {
   return (
     <div class="card my-2">
       <div class="card-body">

@@ -24,7 +24,7 @@ export default function SubjectDetailPage({ data }) {
   )
 }
 
-export function SectionCard(props) {
+function SectionCard(props) {
   const sec = props.data
   return (
     <div class="card w-100 mt-4">

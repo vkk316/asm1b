@@ -15,7 +15,7 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: "/member/" + member.student_id,
       component: path.resolve("./src/pages/member.js"),
-      context: { student_id: member.student_id },
+      context: { std_id: member.student_id },
     })
   })
 

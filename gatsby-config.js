@@ -4,6 +4,9 @@ module.exports = {
     description: `A simple bootstrap 5 and Sass starter for Gatsby. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@r-ichard`,
   },
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
