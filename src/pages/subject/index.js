@@ -1,7 +1,7 @@
 // ส่วนที่ 3
 
 import * as React from "react"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default function MemberInfoPage() {
@@ -45,7 +45,7 @@ function MinSubjectCard(props) {
           </div>
           <div class="col-6 col-md-4 text-right">
             <Link
-              to={`${props.subject.id}`}
+              to={`/subject/${props.subject.id}`}
               className="btn btn-primary"
             >
               Detail

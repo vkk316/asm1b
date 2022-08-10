@@ -6,6 +6,22 @@ exports.createPages = async ({ graphql, actions }) => {
       directus {
         Member {
           student_id
+          first_name
+          last_name
+          enrollment {
+            Section_id {
+              number
+              subject {
+                id
+                title
+              }
+              periods {
+                day
+                start
+                end
+              }
+            }
+          }
         }
       }
     }
@@ -14,16 +30,32 @@ exports.createPages = async ({ graphql, actions }) => {
   mem.directus.Member.forEach(member => {
     actions.createPage({
       path: "/member/" + member.student_id,
-      component: path.resolve("./src/pages/member.js"),
-      context: { std_id: member.student_id },
+      component: path.resolve("./src/components/member.js"),
+      context: { member: member },
     })
   })
 
   const g = await graphql(`
     query {
       directus {
-        Subject {
+        Subject{
           id
+          title
+          sections {
+            periods {
+              day
+              start
+              end
+            }
+            number
+            student {
+              Member_id {
+                student_id
+                first_name
+                last_name
+              }
+            }
+          }
         }
       }
     }
@@ -32,8 +64,8 @@ exports.createPages = async ({ graphql, actions }) => {
   g.directus.Subject.forEach(subject => {
     actions.createPage({
       path: "/subject/" + subject.id,
-      component: path.resolve("./src/pages/subject-detail.js"),
-      context: { subject_id: subject.id },
+      component: path.resolve("./src/components/subject-detail.js"),
+      context: { subject: subject },
     })
   })
 }
